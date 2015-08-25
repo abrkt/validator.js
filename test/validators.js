@@ -1409,6 +1409,27 @@ describe('Validators', function () {
         ],
         args: ['ru-RU']
       });
+
+      test({
+        validator: 'isMobilePhone'
+        , valid: [
+          '+201054532322'
+          , '01054532322'
+          , '01154532322'
+          , '01254532322'
+        ]
+        , invalid: [
+          '12345'
+          , ''
+          , 'Vml2YW11cyBmZXJtZtesting123'
+          , '010-38238383'
+          , '+9676338855'
+          , '19676338855'
+          , '6676338855'
+          , '+99676338855'
+        ],
+        args: ['ar-EG']
+      });
     });
 
     it('should validate currency', function() {
